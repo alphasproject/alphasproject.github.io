@@ -81,6 +81,13 @@
     </div>
 
     <script>
+        var inputs = document.querySelectorAll('input[type="number"]');
+inputs.forEach(function(input) {
+    input.addEventListener('touchstart', function(event) {
+        event.preventDefault();
+    });
+});
+
         function calculate() {
             var option = document.getElementById("option").value;
             var volume = parseFloat(document.getElementById("volume").value);
