@@ -80,6 +80,15 @@
         <p id="result"></p>
     </div>
 
+    <script type="text/javascript">
+        var inputs = document.querySelectorAll('input[type="number"]');
+        inputs.forEach(function(input) {
+        input.addEventListener('touchstart', function(event) {
+        event.preventDefault();
+    });
+});
+</script>
+
     <script>
         function calculate() {
             var option = document.getElementById("option").value;
@@ -98,13 +107,5 @@
             document.getElementById("result").innerText = "Result: " + result.toFixed(1);
         }
     </script>
-    <script type="text/javascript">
-        var inputs = document.querySelectorAll('input[type="number"]');
-        inputs.forEach(function(input) {
-        input.addEventListener('touchstart', function(event) {
-        event.preventDefault();
-    });
-});
-</script>
 </body>
 </html>
